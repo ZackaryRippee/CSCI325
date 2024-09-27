@@ -8,7 +8,7 @@ CC = g++
 
 CFLAGS = -g -Wall -Wextra
 
-TARGET = sanity
+TARGET = test
 
 deafult: all
 
