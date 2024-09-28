@@ -77,16 +77,14 @@ Vector::Vector(const Vector &other){
  *    vec_size=other.vec_size, and vec_capacity=other.vec_capacity.
  * 
  */
-Vector& Vector::operator=(const Vector &other){ 
-  if (this != &other){ 
+Vector& Vector::operator=(const Vector &other){  
     delete[] vec_ptr;
     vec_ptr = new int[vec_capacity];
     vec_capacity = other.vec_capacity;
     for (int i = 0; i < vec_size; i++){
       vec_ptr[i] = other.vec_ptr[i];
     }
-  }
-  return * this;
+    return * this;  //Returns itself
 }
 
 
