@@ -57,7 +57,7 @@ int main(){
       cin >> lastName;
       cout << "Enter phone number: ";
       cin >> phoneNumber;
-      phonebook.push_back(firstName, lastName, phoneNumber);
+      phonebook.insert_sorted(firstName, lastName, phoneNumber);
     }
     else if (choice == 7){
       cout << "Enter the name (first or last) of the user to remove: ";
