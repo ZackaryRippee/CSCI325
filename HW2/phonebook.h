@@ -12,24 +12,28 @@ using namespace std;
 
 class Phonebook{
  private:
-  struct entry{
+  struct Entry{
     string first_name;
     string last_name;
     string phone_number;
-    Entry* next
+    Entry* next;
   };
-  Entry * head;
+  Entry* head;
 
  public:
   Phonebook();
   ~Phonebook();
 
-  void push_front(const string& first_name, const string& last_name, const string& phone_number);
-  void push_bacl(const string& first_name, const string& last_name, const string& phone_number);
-  void read_from_file(const string& fileName);
-  void write_to_file(const string& fileName);
-  void insert_sorted(const string& first_name, const string& last_name, const string& phone_number);
-  void lookup(string& name);
+  void push_front(string first_name, string last_name, string phone_number);
+  void push_back(string first_name, string last_name, string phone_number);
+  void read_from_file(string fileName);
+  void write_to_file(string fileName);
+  void insert_sorted(string first_name, string last_name, string phone_number);
+  void lookup(string name);
+  void reverse_lookup(string phone_number);
   void print();
-  void delete_user(string& name);
+  void delete_user(string name);
 };
+
+
+#endif // PHONEBOOK_H
