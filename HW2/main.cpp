@@ -41,7 +41,7 @@ int main(){
       phonebook.print();
     }
     else if (choice == 4){
-      cout << "Enter first or last name to search for a phone number: ";
+      cout << "Enter last name to search for a phone number: ";
       cin >> name;
       phonebook.lookup(name);
     }
